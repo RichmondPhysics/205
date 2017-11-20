@@ -6,10 +6,10 @@
 **/*.dvi
 # with the ** wildcard, this should also exclude log and aux files from all subdirectories.
 Thumbs.db
-master.synctex.gz
-master.synctex.gz(busy)
-master.toc
-master.pdf
+labmanual_205.synctex.gz
+labmanual_205.synctex.gz(busy)
+labmanual_205.toc
+labmanual_205.pdf
 master_supplement*.pdf
 **/*eps-converted-to.pdf
 
