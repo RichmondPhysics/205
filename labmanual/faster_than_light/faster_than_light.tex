@@ -1,0 +1,48 @@
+\section{Faster-Than-Light Travel?}
+%By Matt Trawick.
+
+\makelabheader %(Space for student name, etc., defined in master.tex)
+
+\bigskip
+
+\textit{The point of this exercise is to step you through an argument that nothing can travel faster than the speed of light. Our strategy is to assume the opposite: that something CAN go faster than the speed of light, and show that this assumption leads to unacceptably unphysical results.}
+
+Open the Mathematica file \filename{faster-than-light.nb}, hit \button{Ctrl-A} to select all, and hit \button{Shift-Enter} to evaluate all the selected statements.
+
+\begin{enumerate}[wide]
+\item Here's the story: Imagine that you are standing on the platform of a train station as a
+very fast train zooms by at $0.8c$, as shown in the Minkowski diagram in the file. The purple lines represent the worldlines of the two ends of the train, and the red lines represent the two ends of the platform. From the graph, what is the length of the train in your reference frame?
+\answerspace{0.7in}
+
+\item From the graph, what is the proper length of the train?
+\answerspace{0.7in}
+
+Return to the platform frame.  Just as the train passes, you see a terrorist next to you toss a bomb into the open window of the last train car. It explodes instantly at coordinates $x = 0$, $ct = 0$.
+
+\item Fortunately, you have recently invented a faster-than-light transmitter that sends messages at five times the speed of light. You immediately use it to send a message to a policeman, who is standing at the back end of the platform. This message is represented by the blue line going faster than light away from the origin.  The message reaches him just as the front of the train passes him. At what coordinates $(x,ct)$ does your message reach him (in the platform frame)?
+\answerspace{0.7in}
+\index{why are we not editing the mathematica file here? Also, is there a new file?}
+
+The policeman immediately passes the message through another open window to the engineer riding in the front of the train. (The policeman is fast, so this takes him effectively zero time.)
+
+\item Now use the slider to translate the events into the reference frame of the train. At approximately what coordinates 
+$(x', ct')$ in that frame does the engineer receive the message?
+\answerspace{0.7in}
+
+\item To get an exact answer for the previous question, you can enter \verb!lorentz[50,10,0.8]!
+into Mathematica after the graph, then \button{Shift-Enter} to evaluate,.  This evaluates a Lorentz transformation on $x=50$ and $ct=10$ with $u=0.8c$.  What are the exact coordinates?
+\answerspace{0.7in}
+
+\item The engineer relays the message at speed $5c$ to the brakeman in the last car of the train, using another one of your special transmitters. The is represented by another blue line going faster than light back from the engineer.  In the reference frame of the train, how long does it take the message to reach the brakeman?
+\answerspace{0.7in}
+
+\item At what coordinates $(x', ct')$ does the brakeman receive the message?
+\answerspace{0.7in}
+
+Alerted to the danger, the brakeman closes the window. With the train window closed, the bomb cannot be tossed inside the train later. Faster than light travel has enabled two observers to really disagree on the results of a chain of 
+events---there is an exploded train in one frame but not the other---which is a reason it has to be impossible.  
+\index{I question whether two observers seeing different things is really the crux of the matter.}
+
+Here's another issue:  Flip back to the platform frame to see that in this frame the engineer's message to the brakeman has traveled back in time.  It went forward in time (slightly) in one frame but backward in time in another.  
+
+\end{enumerate}
