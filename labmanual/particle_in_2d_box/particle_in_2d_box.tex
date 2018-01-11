@@ -23,10 +23,10 @@ In this lab, we'll examine the wave functions and allowed energies of a particle
 \bigskip
 \end{enumerate}
 
-In two dimensions, the Schr\:o dinger equation becomes
+In two dimensions, the Schr\"o dinger equation becomes
 $$ - \frac{\hbar^2}{2m}\left[\frac{\partial^2 \psi(x,y)}{\partial x^2} + \frac{\partial^2 \psi(x,y)}{\partial y^2} \right]
 +U(x,y)\psi(x,y) = E \psi(x,y),$$
-which looks just like the one-dimensional Schr\o: dinger equation, but with one extra derivative.\footnote{Don't worry if you haven't seen the scripty-looking $\partial /\partial x$ symbols before.  It's called a ``partial derivative'', and you can treat it just like you'd treat $d/dx$, taking a derivative with respect to $x$ while treating $y$ as a constant.}
+which looks just like the one-dimensional Schr\"odinger equation, but with one extra derivative.\footnote{Don't worry if you haven't seen the scripty-looking $\partial /\partial x$ symbols before.  It's called a ``partial derivative'', and you can treat it just like you'd treat $d/dx$, taking a derivative with respect to $x$ while treating $y$ as a constant.}
 It turns out that a possible function $\psi(x,y)$ that satisfies this equation is
 $$\psi(x,y)=A\sin(k_1x)\sin(k_2y).$$
 
@@ -56,7 +56,7 @@ into Mathematica.  (Further Mathematica hint: to keep yourself from having to re
 \item Use Mathematica to draw $\psi^2(x,y)$ for each the following pairs of values $(n_1,n_2)$  : (1,1), (1, 2), (2,1), (1,3), (2,3), and (2,4).  In which state(s) does the particle have a high probability of being found near the center of the box?
 \answerspace{0.6in}
 
-\item You have seen before that the continuity constraint on $\psi(x,y)$ leads to discretization of energy.  Plug the wave function $\displaystyle\psi(x,y)=A\sin\left(\frac{n_1\pi x}{L_1}\right)\sin\left(\frac{n_2\pi y}{L_2}\right)$ into the Schrödinger equation for the region where $U(x,y)=0$, and calculate the derivatives.  Lots of stuff should cancel out, leaving you with an expression for the allowed energies $E$ of the particle in terms of $n_1$, $n_2$, $L_1$, $L_2$, and a bunch of other constants.  
+\item You have seen before that the continuity constraint on $\psi(x,y)$ leads to discretization of energy.  Plug the wave function $\displaystyle\psi(x,y)=A\sin\left(\frac{n_1\pi x}{L_1}\right)\sin\left(\frac{n_2\pi y}{L_2}\right)$ into the Schr\"odinger equation for the region where $U(x,y)=0$, and calculate the derivatives.  Lots of stuff should cancel out, leaving you with an expression for the allowed energies $E$ of the particle in terms of $n_1$, $n_2$, $L_1$, $L_2$, and a bunch of other constants.  
 \answerspace{1.6in}
 
 \item Suppose $L_1=L_2=L$.   What pairs of numbers $(n_1,n_2)$ describe the twelve states with the lowest energy?  Rank them below, against the energy axis to the left.  The first four are done for you.
@@ -67,7 +67,7 @@ into Mathematica.  (Further Mathematica hint: to keep yourself from having to re
 10.  Suppose that instead of a square box, we have $L_2=2L_1$.  Which state has greater energy: (2, 1) or (1, 2)?  Or are their energies the same?
 \answerspace{0.6in}
 
-11.  Now that you've seen a 1D box and a 2D box, picture a particle in a 3D box, like a fly is stuck inside a regular aquarium tank or something like that.  Yes, the mathematical extension from 2D to 3D is just as obvious as you would guess it to be; an extra derivative is added to the Schrödinger equation, and a wave function that satisfies the equation is given by given by
+11.  Now that you've seen a 1D box and a 2D box, picture a particle in a 3D box, like a fly is stuck inside a regular aquarium tank or something like that.  Yes, the mathematical extension from 2D to 3D is just as obvious as you would guess it to be; an extra derivative is added to the Schr\"odinger equation, and a wave function that satisfies the equation is given by given by
 $$\displaystyle\psi(x,y)=A\sin\left(\frac{n_1\pi x}{L_1}\right)\sin\left(\frac{n_2\pi y}{L_2}\right)\sin\left(\frac{n_3\pi z}{L_3}\right)$$
 In the space below, draw two cubes, representing boxes of size $L_1=L_2=L_3=L$.  With some kind of shading, draw what $\psi(x,y,z)$ would look like for the (1,1,1) state and the (1,1,2) state.  (You may want to reverse the meanings of light and dark regions from your previous drawings.) Which state has higher energy?
 \answerspace{1.6in}
