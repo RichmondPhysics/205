@@ -1,0 +1,745 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     30922,        736]
+NotebookOptionsPosition[     30085,        707]
+NotebookOutlinePosition[     30506,        723]
+CellTagsIndexPosition[     30463,        720]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lorentz", "[", 
+   RowBox[{"x_", ",", "t_", ",", "v_"}], "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"x", "-", " ", 
+       RowBox[{"v", " ", "t"}]}], ")"}], "/", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       RowBox[{"v", "^", "2"}]}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"t", " ", "-", " ", 
+       RowBox[{"v", " ", "x"}]}], ")"}], "/", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"1", "-", 
+       RowBox[{"v", "^", "2"}]}], "]"}]}]}], "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "t"}], " ", "v"}], "+", "x"}], 
+    SqrtBox[
+     RowBox[{"1", "-", 
+      SuperscriptBox["v", "2"]}]]], ",", 
+   FractionBox[
+    RowBox[{"t", "-", 
+     RowBox[{"v", " ", "x"}]}], 
+    SqrtBox[
+     RowBox[{"1", "-", 
+      SuperscriptBox["v", "2"]}]]]}], "}"}]], "Output",
+ CellChangeTimes->{3.3984496236595297`*^9, 3.4296085042379875`*^9, 
+  3.5566178700467978`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Column", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"v", ",", 
+       RowBox[{"Show", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"lorentz", "[", 
+                RowBox[{"x", ",", "t", ",", "v"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", 
+                 RowBox[{"-", "0"}], ",", "0", ",", "10"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"t", ",", 
+                 RowBox[{"-", "0"}], ",", "0", ",", "10"}], "}"}]}], "]"}], 
+             ",", "1"}], "]"}], ",", " ", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "100"}], ",", "100"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "50"}], ",", "150"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+           RowBox[{"GridLines", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Table", "[", 
+               RowBox[{"i", ",", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"-", "100"}], ",", "100", ",", "10"}], "}"}]}], 
+               "]"}], ",", 
+              RowBox[{"Table", "[", 
+               RowBox[{"i", ",", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"-", "100"}], ",", "1000", ",", "10"}], "}"}]}], 
+               "]"}]}], "}"}]}], ",", " ", 
+           RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"PointSize", "[", "Medium", "]"}]}], ",", " ", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"x", "'"}], ",", 
+              RowBox[{"ct", "'"}]}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "0", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"30", ",", "50", ",", "v"}], "]"}]}], "}"}], ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Purple", ",", " ", "Thick"}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{"30", ",", "50", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "100", ",", "v"}], "]"}]}], "}"}], ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Purple", ",", " ", "Thick"}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "0", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "100", ",", "v"}], "]"}]}], "}"}], ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Red", ",", " ", "Thick"}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"ListPlot", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"lorentz", "[", 
+                RowBox[{"0", ",", "k", ",", "v"}], "]"}], ",", 
+               RowBox[{"lorentz", "[", 
+                RowBox[{"50", ",", "k", ",", "v"}], "]"}]}], "}"}], ",", 
+             RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", "Blue", "}"}]}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"k", ",", 
+             RowBox[{"-", "0"}], ",", "100", ",", "25"}], "}"}]}], "]"}], ",",
+          "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{"30", ",", "50", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "32.5"}], ",", "12.5", ",", "v"}], "]"}]}], "}"}],
+            ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", "Green", "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{"18.75", ",", "31.25", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "43.75"}], ",", 
+               RowBox[{"-", "6.25"}], ",", "v"}], "]"}]}], "}"}], ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", "Green", "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "0", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"30", ",", "50", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "100", ",", "v"}], "]"}]}], "}"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Orange"}], 
+             "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "100"}], ",", 
+               RowBox[{"-", "100"}], ",", "0"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"100", ",", "100", ",", "0"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"100", ",", 
+               RowBox[{"-", "100"}], ",", "0"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "100"}], ",", "100", ",", "0"}], "]"}]}], "}"}], 
+           ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Dashed", ",", " ", 
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black"}], 
+             "}"}]}]}], "\[IndentingNewLine]", "]"}]}], "]"}]}], "}"}], ",", 
+     "Center"}], "]"}], "\[IndentingNewLine]", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"v", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", ".9"}], ",", ".9"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.429610822746764*^9, 3.4296108241686487`*^9}, {
+   3.4296109428720207`*^9, 3.42961096165315*^9}, {3.4296110106528606`*^9, 
+   3.4296110111997356`*^9}, {3.4296110500591106`*^9, 
+   3.4296110584809856`*^9}, {3.429611151996501*^9, 3.4296111699807615`*^9}, {
+   3.429611312964631*^9, 3.4296113328551283`*^9}, {3.4614137606928787`*^9, 
+   3.4614138478055563`*^9}, {3.461413974981*^9, 3.461414011618601*^9}, {
+   3.461414043494417*^9, 3.461414063604307*^9}, {3.4614141165431623`*^9, 
+   3.4614141396682844`*^9}, {3.4614141818682566`*^9, 
+   3.4614141832154636`*^9}, {3.4614142246969132`*^9, 3.461414225182534*^9}, {
+   3.4614142676508913`*^9, 3.4614143297947397`*^9}, {3.4614143838553452`*^9, 
+   3.4614144166112785`*^9}, {3.4614144561831026`*^9, 3.461414466443205*^9}, {
+   3.4614145070926046`*^9, 3.4614145367468033`*^9}, {3.4614145791479273`*^9, 
+   3.461414598635866*^9}, {3.461414736943923*^9, 3.461414737757224*^9}, {
+   3.461414777373025*^9, 3.4614147827033668`*^9}, {3.461414876476735*^9, 
+   3.4614148816663933`*^9}, {3.461414952367668*^9, 3.461414979519583*^9}, {
+   3.5566179120263977`*^9, 3.556617946361998*^9}, {3.556617987124798*^9, 
+   3.556618020976798*^9}, 3.5566180894139977`*^9, {3.556618136588398*^9, 
+   3.5566182168971977`*^9}, {3.556618281886798*^9, 3.5566183028687983`*^9}, {
+   3.558202119478794*^9, 3.558202121977044*^9}, 3.5582026801538563`*^9, {
+   3.5582027469355335`*^9, 3.5582028066075*^9}, {3.558202858397679*^9, 
+   3.558202864492288*^9}, 3.5582029319440327`*^9, {3.558204051901341*^9, 
+   3.558204089423341*^9}, {3.558204121507341*^9, 3.5582041228893414`*^9}, {
+   3.5582048569335403`*^9, 3.558204891559003*^9}, {3.5582223937521*^9, 
+   3.558222446709129*^9}, {3.5582226558800926`*^9, 3.558222680049475*^9}, {
+   3.5582228556785207`*^9, 3.558222864952051*^9}, {3.5582231468583927`*^9, 
+   3.558223167314108*^9}, {3.558223212527339*^9, 3.558223213084617*^9}, {
+   3.558223319580839*^9, 3.5582233243011975`*^9}, {3.558223387330697*^9, 
+   3.5582233965863223`*^9}, {3.5582256090729413`*^9, 3.558225626552147*^9}, {
+   3.5582256758576965`*^9, 3.5582257245661716`*^9}, {3.5582262205182943`*^9, 
+   3.558226261944888*^9}, {3.5582263807379584`*^9, 3.5582264077856627`*^9}, {
+   3.558226578229706*^9, 3.5582265802839108`*^9}, {3.5582267073406153`*^9, 
+   3.5582267280656877`*^9}, {3.5582271827228847`*^9, 
+   3.5582272580678844`*^9}, {3.558227350455885*^9, 3.5582273831988845`*^9}, 
+   3.5582274136008415`*^9, {3.558227759490427*^9, 3.5582277655070286`*^9}, {
+   3.558228673663997*^9, 3.558228687489762*^9}, {3.5582287631143813`*^9, 
+   3.5582287912601957`*^9}, {3.558228840761145*^9, 3.5582288418262515`*^9}, {
+   3.558229006293697*^9, 3.558229047018876*^9}, {3.558229739662874*^9, 
+   3.558229786657874*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`v$$ = -0.28600000000000003`, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`v$$], 0}, -0.9, 0.9}}, Typeset`size$$ = {
+    576., {291., 296.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`v$146673$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`v$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`v$$, $CellContext`v$146673$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Column[{$CellContext`v$$, 
+         Show[
+          ListPlot[
+           Flatten[
+            Table[
+             $CellContext`lorentz[$CellContext`x, $CellContext`t, \
+$CellContext`v$$], {$CellContext`x, 0, 0, 10}, {$CellContext`t, 0, 0, 10}], 
+            1], PlotRange -> {{-100, 100}, {-50, 150}}, AspectRatio -> 1, 
+           GridLines -> {
+             Table[$CellContext`i, {$CellContext`i, -100, 100, 10}], 
+             Table[$CellContext`i, {$CellContext`i, -100, 1000, 10}]}, 
+           ImageSize -> Large, PlotStyle -> PointSize[Medium], AxesLabel -> {
+             Derivative[1][$CellContext`x], 
+             Derivative[1][$CellContext`ct]}], 
+          ListPlot[{
+            $CellContext`lorentz[0, 0, $CellContext`v$$], 
+            $CellContext`lorentz[30, 50, $CellContext`v$$]}, Joined -> True, 
+           PlotStyle -> {Purple, Thick}], 
+          ListPlot[{
+            $CellContext`lorentz[30, 50, $CellContext`v$$], 
+            $CellContext`lorentz[0, 100, $CellContext`v$$]}, Joined -> True, 
+           PlotStyle -> {Purple, Thick}], 
+          ListPlot[{
+            $CellContext`lorentz[0, 0, $CellContext`v$$], 
+            $CellContext`lorentz[0, 100, $CellContext`v$$]}, Joined -> True, 
+           PlotStyle -> {Red, Thick}], 
+          Table[
+           ListPlot[{
+             $CellContext`lorentz[0, $CellContext`k, $CellContext`v$$], 
+             $CellContext`lorentz[50, $CellContext`k, $CellContext`v$$]}, 
+            Joined -> True, PlotStyle -> {Blue}], {$CellContext`k, 0, 100, 
+            25}], 
+          ListPlot[{
+            $CellContext`lorentz[30, 50, $CellContext`v$$], 
+            $CellContext`lorentz[-32.5, 12.5, $CellContext`v$$]}, Joined -> 
+           True, PlotStyle -> {Green}], 
+          ListPlot[{
+            $CellContext`lorentz[18.75, 31.25, $CellContext`v$$], 
+            $CellContext`lorentz[-43.75, -6.25, $CellContext`v$$]}, Joined -> 
+           True, PlotStyle -> {Green}], 
+          ListPlot[{
+            $CellContext`lorentz[0, 0, $CellContext`v$$], 
+            $CellContext`lorentz[30, 50, $CellContext`v$$], 
+            $CellContext`lorentz[0, 100, $CellContext`v$$]}, PlotStyle -> {
+             PointSize[Large], Orange}], 
+          ListPlot[{
+            $CellContext`lorentz[-100, -100, 0], 
+            $CellContext`lorentz[100, 100, 0], 
+            $CellContext`lorentz[100, -100, 0], 
+            $CellContext`lorentz[-100, 100, 0]}, Joined -> True, 
+           PlotStyle -> {Dashed, 
+             PointSize[Large], Black}]]}, Center], 
+      "Specifications" :> {{{$CellContext`v$$, 0}, -0.9, 0.9}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{627., {341., 346.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.5582314120008707`*^9, 3.558231427555871*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Column", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"v", ",", 
+       RowBox[{"Show", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"lorentz", "[", 
+                RowBox[{"x", ",", "t", ",", "v"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"x", ",", 
+                 RowBox[{"-", "0"}], ",", "0", ",", "10"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"t", ",", 
+                 RowBox[{"-", "0"}], ",", "0", ",", "10"}], "}"}]}], "]"}], 
+             ",", "1"}], "]"}], ",", " ", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "100"}], ",", "100"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "100"}], ",", "100"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+           RowBox[{"GridLines", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Table", "[", 
+               RowBox[{"i", ",", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"-", "100"}], ",", "100", ",", "10"}], "}"}]}], 
+               "]"}], ",", 
+              RowBox[{"Table", "[", 
+               RowBox[{"i", ",", 
+                RowBox[{"{", 
+                 RowBox[{"i", ",", 
+                  RowBox[{"-", "100"}], ",", "1000", ",", "10"}], "}"}]}], 
+               "]"}]}], "}"}]}], ",", " ", 
+           RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"PointSize", "[", "Medium", "]"}]}], ",", " ", 
+           RowBox[{"AxesLabel", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"x", "'"}], ",", 
+              RowBox[{"ct", "'"}]}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "30"}], ",", 
+               RowBox[{"-", "50"}], ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "0", ",", "v"}], "]"}]}], "}"}], ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Purple", ",", " ", "Thick"}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "30"}], ",", "50", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "0", ",", "v"}], "]"}]}], "}"}], ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Purple", ",", "Thick"}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "30"}], ",", 
+               RowBox[{"-", "1000"}], ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "30"}], ",", "1000", ",", "v"}], "]"}]}], "}"}], 
+           ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Red", ",", "Thick"}], "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"ListPlot", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"lorentz", "[", 
+                RowBox[{
+                 RowBox[{"-", "30"}], ",", "k", ",", "v"}], "]"}], ",", 
+               RowBox[{"lorentz", "[", 
+                RowBox[{"20", ",", "k", ",", "v"}], "]"}]}], "}"}], ",", 
+             RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", "Blue", "}"}]}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"k", ",", 
+             RowBox[{"-", "50"}], ",", "50", ",", "25"}], "}"}]}], "]"}], ",",
+          "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "0", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "62.5"}], ",", 
+               RowBox[{"-", "37.5"}], ",", "v"}], "]"}]}], "}"}], ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", "Green", "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "12.75"}], ",", 
+               RowBox[{"-", "19.25"}], ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "73.75"}], ",", 
+               RowBox[{"-", "56.25"}], ",", "v"}], "]"}]}], "}"}], ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", "Green", "}"}]}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "0", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "62.5"}], ",", "37.5", ",", "v"}], "]"}]}], "}"}],
+            ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", "Cyan", "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{"0", ",", "0", ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "30"}], ",", 
+               RowBox[{"-", "50"}], ",", "v"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "30"}], ",", "50", ",", "v"}], "]"}]}], "}"}], 
+           ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Orange"}], 
+             "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"ListPlot", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "100"}], ",", 
+               RowBox[{"-", "100"}], ",", "0"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"100", ",", "100", ",", "0"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{"100", ",", 
+               RowBox[{"-", "100"}], ",", "0"}], "]"}], ",", 
+             RowBox[{"lorentz", "[", 
+              RowBox[{
+               RowBox[{"-", "100"}], ",", "100", ",", "0"}], "]"}]}], "}"}], 
+           ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"Dashed", ",", " ", 
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black"}], 
+             "}"}]}]}], "\[IndentingNewLine]", "]"}]}], "]"}]}], "}"}], ",", 
+     "Center"}], "]"}], "\[IndentingNewLine]", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"v", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", ".9"}], ",", ".9"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.558231303607871*^9, 3.558231303667871*^9}, 
+   3.558231422988871*^9, 3.558260244626034*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`v$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`v$$], 0}, -0.9, 0.9}}, Typeset`size$$ = {
+    576., {291., 296.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`v$180274$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`v$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`v$$, $CellContext`v$180274$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Column[{$CellContext`v$$, 
+         Show[
+          ListPlot[
+           Flatten[
+            Table[
+             $CellContext`lorentz[$CellContext`x, $CellContext`t, \
+$CellContext`v$$], {$CellContext`x, 0, 0, 10}, {$CellContext`t, 0, 0, 10}], 
+            1], PlotRange -> {{-100, 100}, {-100, 100}}, AspectRatio -> 1, 
+           GridLines -> {
+             Table[$CellContext`i, {$CellContext`i, -100, 100, 10}], 
+             Table[$CellContext`i, {$CellContext`i, -100, 1000, 10}]}, 
+           ImageSize -> Large, PlotStyle -> PointSize[Medium], AxesLabel -> {
+             Derivative[1][$CellContext`x], 
+             Derivative[1][$CellContext`ct]}], 
+          ListPlot[{
+            $CellContext`lorentz[-30, -50, $CellContext`v$$], 
+            $CellContext`lorentz[0, 0, $CellContext`v$$]}, Joined -> True, 
+           PlotStyle -> {Purple, Thick}], 
+          ListPlot[{
+            $CellContext`lorentz[-30, 50, $CellContext`v$$], 
+            $CellContext`lorentz[0, 0, $CellContext`v$$]}, Joined -> True, 
+           PlotStyle -> {Purple, Thick}], 
+          ListPlot[{
+            $CellContext`lorentz[-30, -1000, $CellContext`v$$], 
+            $CellContext`lorentz[-30, 1000, $CellContext`v$$]}, Joined -> 
+           True, PlotStyle -> {Red, Thick}], 
+          Table[
+           ListPlot[{
+             $CellContext`lorentz[-30, $CellContext`k, $CellContext`v$$], 
+             $CellContext`lorentz[20, $CellContext`k, $CellContext`v$$]}, 
+            Joined -> True, PlotStyle -> {Blue}], {$CellContext`k, -50, 50, 
+            25}], 
+          ListPlot[{
+            $CellContext`lorentz[0, 0, $CellContext`v$$], 
+            $CellContext`lorentz[-62.5, -37.5, $CellContext`v$$]}, Joined -> 
+           True, PlotStyle -> {Green}], 
+          ListPlot[{
+            $CellContext`lorentz[-12.75, -19.25, $CellContext`v$$], 
+            $CellContext`lorentz[-73.75, -56.25, $CellContext`v$$]}, Joined -> 
+           True, PlotStyle -> {Green}], 
+          ListPlot[{
+            $CellContext`lorentz[0, 0, $CellContext`v$$], 
+            $CellContext`lorentz[-62.5, 37.5, $CellContext`v$$]}, Joined -> 
+           True, PlotStyle -> {Cyan}], 
+          ListPlot[{
+            $CellContext`lorentz[0, 0, $CellContext`v$$], 
+            $CellContext`lorentz[-30, -50, $CellContext`v$$], 
+            $CellContext`lorentz[-30, 50, $CellContext`v$$]}, PlotStyle -> {
+             PointSize[Large], Orange}], 
+          ListPlot[{
+            $CellContext`lorentz[-100, -100, 0], 
+            $CellContext`lorentz[100, 100, 0], 
+            $CellContext`lorentz[100, -100, 0], 
+            $CellContext`lorentz[-100, 100, 0]}, Joined -> True, 
+           PlotStyle -> {Dashed, 
+             PointSize[Large], Black}]]}, Center], 
+      "Specifications" :> {{{$CellContext`v$$, 0}, -0.9, 0.9}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{627., {341., 346.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.5582602468128448`*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.4614148181399775`*^9, 3.4614148571405697`*^9}, 
+   3.461414926044222*^9, {3.5582223462753844`*^9, 3.5582223667655563`*^9}, {
+   3.5582224914096856`*^9, 3.5582225143859997`*^9}, {3.5582226381110764`*^9, 
+   3.558222646194539*^9}, {3.5582259950567503`*^9, 3.5582260071589603`*^9}, {
+   3.5582260450357475`*^9, 3.5582261274949923`*^9}, {3.5582279784593215`*^9, 
+   3.5582280339378815`*^9}, {3.5582283018388815`*^9, 3.558228305618881*^9}, {
+   3.558228428373949*^9, 3.5582285289080515`*^9}, {3.5582286218506365`*^9, 
+   3.55822863557138*^9}, {3.558228816526722*^9, 3.5582288206231318`*^9}, 
+   3.558228916967765*^9, {3.558230647636033*^9, 3.5582306576630354`*^9}, {
+   3.558231367392871*^9, 3.558231371504871*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.558231363378871*^9, 3.558231363392871*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.5582225702251935`*^9, 3.558228043632881*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.558227308358885*^9, 3.5582273275988846`*^9}, 
+   3.5582279116246386`*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5582279100804844`*^9, 3.558227910091485*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.4614149278418446`*^9, 3.461414927873107*^9}}]
+},
+WindowSize->{1272, 907},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 582, 19, 31, "Input"],
+Cell[1152, 43, 472, 17, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1661, 65, 10266, 223, 332, "Input"],
+Cell[11930, 290, 4056, 82, 704, "Output"]
+}, Open  ]],
+Cell[16001, 375, 8578, 214, 352, "Input"],
+Cell[24582, 591, 4228, 86, 704, "Output"],
+Cell[28813, 679, 759, 10, 31, "Input"],
+Cell[29575, 691, 92, 1, 31, "Input"],
+Cell[29670, 694, 92, 1, 31, "Input"],
+Cell[29765, 697, 122, 2, 31, "Input"],
+Cell[29890, 701, 94, 1, 31, "Input"],
+Cell[29987, 704, 94, 1, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
