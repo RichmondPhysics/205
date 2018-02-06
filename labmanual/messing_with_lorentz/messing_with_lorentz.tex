@@ -7,7 +7,8 @@
 
 Open the Mathematica notebook \filename{lorentz\_transform.nb}.  Hit \button{Control-A} to select all text, and
 hit \button{Shift-Enter} to execute all of these lines of code. (If a window pops up asking to enable
-dynamic content, select \button{Enable}.)  There are two plot modules, one for a Galilean transformation between frames, and one for a Lorentz transformation between frames.  The relative velocity of the observer can be adjusted in each with the slide bar.  In each is a line that starts with \verb!ListPlot[{!, and this is where you can enter the $(x,t)$ coordinates for two points.
+dynamic content, select \button{Enable}.)  There are two plot modules, one for a Galilean transformation between frames, and one for a Lorentz transformation between frames.  The relative velocity of the observer can be adjusted in each with the slide bar. 
+\medskip
 
 Answer each of these questions below for both the Galilean and Lorentz transformations:
 
@@ -21,7 +22,13 @@ Answer each of these questions below for both the Galilean and Lorentz transform
 \hspace{0.5in}Lorentz:
 \answerspace{0.5in}
 
-\item Now consider two events with $(x,t)$ coordinates of $(1,2)$ and $(0,5)$. In what reference frame is the time between these two events the smallest that it can be?  For the Lorentz case, does this make sense in light of what we know about the proper time?
+\item Now consider two events with $(x,t)$ coordinates of $(1,2)$ and $(0,5)$. To change the points, you will need to edit the two lines in the Mathematica file that say
+\begin{align*}
+&\texttt{ListPlot[{lorentz[1, 2, v], lorentz[1, 5, v]},}~~~ {\rm and} \\
+&\texttt{ListPlot[{galilean[1, 2, v], galilean[1, 5, v]},}
+\end{align*}
+and hit \button{Shift-Enter} again.
+In what reference frame is the time between these two events the smallest that it can be?  For the Lorentz case, does this make sense in light of what we know about the proper time?
 
 \bigskip
 \hspace{0.5in}Galilean:
