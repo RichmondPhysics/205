@@ -6,7 +6,7 @@
 
 %The \includeonly line below is a great way to save time so you don't always have to compile the WHOLE latex document, if for instance you've only made changes to a single lab.  If you want to compile more than two labs, the syntax is \includeonly{lab1,lab2,lab3} with no spaces after the commas.
 %The master.pdf produced will have only the title page, TOC, and that single lab, though the other lab names will appear in the TOC.
-%\includeonly{time_dilation_length_contraction/time_dilation_length_contraction}
+%\includeonly{particle_in_finite_well/particle_in_finite_well}
 
 %Use the following line to override all of the 1's and 0's in the \includelab statements below
 %\includealllabstrue
@@ -20,32 +20,35 @@
 \cleardoublepage
 
 %These items are for Jack, who wanted a slightly different format
-\renewcommand{\makelabheader}{Name: \rule{2.8in}{0.1pt}}
+%\renewcommand{\makelabheader}{Name: \rule{2.8in}{0.1pt}}
 
 %Use \includelab{1} to include, or \includelab{0} to exclude.  Overridden with \includealllabstrue or \includeonly
 %--------------------------------------------
 \part{Relativity}
 
+\includelab{1}[../../131/StudentGuideModule1/]{galilean_exercises/galilean_exercises}
 \includelab{1}[../../131/StudentGuideModule1/]{time_dilation_length_contraction/time_dilation_length_contraction} 
+\includelab{0}{time_dilation_length_contraction/time_dilation_length_contraction_short} %older version, no muons
+\includelab{1}[../../131/StudentGuideModule1/]{lorentz_transformations/lorentz_transformations}
 \includelab{1}{messing_with_lorentz/messing_with_lorentz} 
 \includelab{1}[../../131/StudentGuideModule1/]{pole_and_barn/pole_and_barn} 
+\includelab{1}[../../132/StudentGuideModule2/]{doppler_shift/doppler_shift}
 \includelab{1}{faster_than_light/faster_than_light} 
 \includelab{1}{proper_length_distance/proper_length_distance}
-\includelab{0}{relativistic_example/relativistic_example}
 \includelab{1}{twin_paradox/twin_paradox}
-	
+\includelab{1}{relativistic_example/relativistic_example}
+
 %--------------------------------------------
 \part{Wave-Particle Duality and Quantum Mechanics}
 
-\includelab{1}{photoelectric_effect/photoelectric_effect}
+\includelab{0}{photoelectric_effect/photoelectric_effect}
 \includelab{1}{particle_in_infinite_well/particle_in_infinite_well}
+\includelab{1}{particle_in_2d_box/particle_in_2d_box}
 \includelab{1}{particle_in_finite_well/particle_in_finite_well}
-\includelab{0}{particle_in_2d_box/particle_in_2d_box}
-\includelab{0}{harmonic_oscillator/harmonic_oscillator}
-\includelab{0}[../../132/StudentGuideModule2/]{einstein_solid/einstein_solid}
-\includelab{1}{particle_interactions/particle_interactions}
+\includelab{1}{harmonic_oscillator/harmonic_oscillator}
+\includelab{1}[../../132/StudentGuideModule2/]{einstein_solid/einstein_solid}
+\includelab{0}{particle_interactions/particle_interactions}
 
-\begin{comment}
 %--------------------------------------------
 %\part{Appendices}
 \appendix
@@ -56,5 +59,4 @@
 \titleformat{\section}{\normalfont\large\bfseries}{\headersupplementmark \thesection :}{1ex}{}
 
 \includelab{1}{relativistic_boot_camp/relativistic_boot_camp}
-\end{comment}
 \end{document}
