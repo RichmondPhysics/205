@@ -1,0 +1,9 @@
+This is a short list of things we may want to work on.
+
+List of bad, ugly, pixelated old figures that could be replaced.
+26 combining forces: cart figs not great.
+27 force, mass, accel: cart figs not great.
+35 Work and power: 1 easy one.
+36 Work and KE: two medium bad ones.
+46 Intro to rotation: three more easy ones to fix.
+
