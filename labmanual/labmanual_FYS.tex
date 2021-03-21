@@ -1,0 +1,53 @@
+\documentclass[english,twoside]{article}
+
+\input{../../131/StudentGuideModule1/labmanual_formatting_commands} %all general latex packages, commands, and definitions now here.
+\newcommand{\coursefolder}{Phys205} %This defines the place students will look for various files
+\ForceSectionOddPage %This option makes each lab start on odd numbered page (right hand side).
+
+%The \includeonly line below is a great way to save time so you don't always have to compile the WHOLE latex document, if for instance you've only made changes to a single lab.  If you want to compile more than two labs, the syntax is \includeonly{lab1,lab2,lab3} with no spaces after the commas.
+%The master.pdf produced will have only the title page, TOC, and that single lab, though the other lab names will appear in the TOC.
+%\includeonly{proper_length_distance/proper_length_distance}
+
+%Use the following line to override all of the 1's and 0's in the \includelab statements below
+%\includealllabstrue
+
+%Use the line below to disable hyperlinks, to make sure no markups are visible around references when printing.
+%\hypersetup{draft}
+
+\makeindex
+\begin{document}
+
+\input{FYS_front_pages/FYS_title_page}
+
+\setcounter{tocdepth}{1}\tableofcontents{}
+\cleardoublepage
+
+%Use \includelab{1} to include, or \includelab{0} to exclude.  Overridden with \includealllabstrue or \includeonly
+%--------------------------------------------
+\part{Relativity}
+
+\includelab{1}[../../132/StudentGuideModule2/]{interference_of_light/interference} %Matt's Version
+\includelab{1}[../../131/StudentGuideModule1/]{position/position}
+\includelab{1}[../../131/StudentGuideModule1/]{galilean_exercises/galilean_exercises}
+\includelab{1}[../../131/StudentGuideModule1/]{time_dilation_length_contraction/time_dilation_length_contraction_short} %shorter version, no muons
+\includelab{1}[../../131/StudentGuideModule1/]{lorentz_transformations/lorentz_transformations}
+\includelab{1}{messing_with_lorentz/messing_with_lorentz} 
+\includelab{1}[../../132/StudentGuideModule2/]{radiocarbon_dating/radiocarbon_dating}
+\includelab{1}[../../131/StudentGuideModule1/]{time_dilation_length_contraction/muon_lifetimes}
+\includelab{1}{velocity_transformations/velocity_transformations} 
+\includelab{1}{faster_than_light/faster_than_light} 
+\includelab{1}{proper_length_distance/proper_length_distance}
+\includelab{1}[../../131/StudentGuideModule1/]{pole_and_barn/pole_and_barn} 
+\includelab{1}[../../132/StudentGuideModule2/]{doppler_shift/doppler_shift}
+\includelab{1}{twin_paradox/twin_paradox}
+\includelab{1}{relativistic_example/relativistic_example}
+
+
+%--------------------------------------------
+\startappendix
+\includelab{1}{relativistic_boot_camp/relativistic_boot_camp}
+
+% The following command prints the "Instructor Notes" section at the end of the manual.
+% Comment it out for the regular student edition.
+\startinstructornotes
+\end{document}
