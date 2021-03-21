@@ -11,6 +11,9 @@
 %Use the following line to override all of the 1's and 0's in the \includelab statements below
 %\includealllabstrue
 
+%Use the line below to disable hyperlinks, to make sure no markups are visible around references when printing.
+%\hypersetup{draft}
+
 \makeindex
 \begin{document}
 
@@ -50,13 +53,12 @@
 \includelab{0}{particle_interactions/particle_interactions}
 
 %--------------------------------------------
-%\part{Appendices}
-\appendix
-\immediateaddcontentsline{toc}{part}{Appendices} %Avoids a Roman part number for the Appendices in the toc
-\cleardoublepage
-\NoForceSectionOddPage %Makes NO extra page break after each appendix; Appendices can start on odd or even page (right or left side).
-\renewcommand{\headersupplementmark}{Appendix }
-\titleformat{\section}{\normalfont\large\bfseries}{\headersupplementmark \thesection :}{1ex}{}
+\startappendix
 
 \includelab{1}{relativistic_boot_camp/relativistic_boot_camp}
+
+% The following command prints the "Instructor Notes" section at the end of the manual.
+% Comment it out for the regular student edition.
+%\startinstructornotes
+
 \end{document}
