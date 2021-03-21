@@ -5,30 +5,25 @@
 
 \bigskip
 
-Open the Mathematica notebook \filename{lorentz\_transform.nb}.  Hit \button{Control-A} to select all text, and
+Open the Mathematica notebook \filename{minkowski\_events.nb}.  Hit \button{Control-A} to select all text, and
 hit \button{Shift-Enter} to execute all of these lines of code. (If a window pops up asking to enable
 dynamic content, select \button{Enable}.)  There are two plot modules, one for a Galilean transformation between frames, and one for a Lorentz transformation between frames.  The relative velocity of the observer can be adjusted in each with the slide bar. 
 \medskip
 
-Answer each of these questions below for both the Galilean and Lorentz transformations:
 
-\begin{enumerate}[wide, nosep]
-\item Consider two events with $(x,t)$ coordinates of $(1,2)$ and $(1,5)$ (it should be initially set to these values).  Does the velocity of the observer affect the time elapsed between the two events?  Is there a reference frame in which these two events are simultaneous (occur at the same time)?  
-
-\bigskip
-\hspace{0.5in}Galilean:
-
-\bigskip
-\hspace{0.5in}Lorentz:
-\answerspace{0.5in}
-
-\item Now consider two events with $(x,t)$ coordinates of $(1,2)$ and $(0,5)$. To change the points, you will need to edit the two lines in the Mathematica file that say
+Consider two events with $(x,t)$ coordinates of $(1,2)$ and $(1,5)$.  To graph these points, you may need to edit two lines in the Mathematica file to say something like:
 \begin{align*}
 &\texttt{ListPlot[{lorentz[1, 2, v], lorentz[1, 5, v]},}~~~ {\rm and} \\
 &\texttt{ListPlot[{galilean[1, 2, v], galilean[1, 5, v]},}
 \end{align*}
 and hit \button{Shift-Enter} again.
-In what reference frame is the time between these two events the smallest that it can be?  For the Lorentz case, does this make sense in light of what we know about the proper time?
+
+\bigskip
+
+Answer each of these questions below for both the Galilean and Lorentz transformations:
+
+\begin{enumerate}[wide, nosep]
+\item Does the time elapsed between the two events depend on the reference frame in which they are viewed?  
 
 \bigskip
 \hspace{0.5in}Galilean:
@@ -36,6 +31,21 @@ In what reference frame is the time between these two events the smallest that i
 \bigskip
 \hspace{0.5in}Lorentz:
 \answerspace{0.5in}
+
+\item Is there any reference frame in which these two events are simultaneous (occur at the same time)?  
+
+\bigskip
+\hspace{0.5in}Galilean:
+
+\bigskip
+\hspace{0.5in}Lorentz:
+\answerspace{0.5in}
+
+\item Now consider two events with $(x,t)$ coordinates of $(1,2)$ and $(0,5)$. 
+%To change the points, you will need to edit the two lines in the Mathematica file that say
+For the case of Lorentz transformations, in what reference frame is the time between these two events the smallest that it can be?  Does this make sense in light of what we know about the proper time?
+\answerspace{0.7in}
+
 
 \item Consider two events with $(x,t)$ coordinates of $(5,1)$ and $(3,2)$. In what reference frame $S'$ are these two events simultaneous? That is, what is the speed $v$ of the reference frame $S'$ relative to $S$ in which the events occur at the same time?
 
@@ -46,7 +56,11 @@ In what reference frame is the time between these two events the smallest that i
 \hspace{0.5in}Lorentz:
 \answerspace{0.5in}
 
-\item Consider two events with $(x,t)$ coordinates of $(1,1)$ and $(3,3)$. In this reference frame, can a photon travel fast enough to travel from the event at $(1,1)$ to the event at $(3,3)$?  Is there a reference frame in which a photon is NOT fast enough to travel between these two events?
+\item Consider two events with $(x,t)$ coordinates of $(1,1)$ and $(3,3)$. In the reference frame with $v=0$, in which the two events occur at those specific coordinates of $(1,1)$ and $(3,3)$, can a photon travel fast enough to travel from the event at $(1,1)$ to the event at $(3,3)$? 
+
+\answerspace{0.7in}
+
+\item Is there any reference frame in which a photon is NOT fast enough to travel between these two events?
 
 \bigskip
 \hspace{0.5in}Galilean:

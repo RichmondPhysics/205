@@ -10,40 +10,46 @@
 Open the Mathematica file \filename{faster-than-light.nb}, hit \button{Ctrl-A} to select all, and hit \button{Shift-Enter} to evaluate all the selected statements.
 
 \begin{enumerate}[wide]
-\item Here's the story: Imagine that you are standing on the platform of a train station as a
-very fast train zooms by at $0.8c$, as shown in the Minkowski diagram in the file. The purple lines represent the worldlines of the two ends of the train, and the red lines represent the two ends of the platform. From the graph, what is the length of the train in your reference frame?
+\item Imagine that you are standing on the platform of a train station at $x=0$  when a
+very fast train zooms by at speed $v=0.8c$.  The Minkowski diagram in the file shows one vertical red line representing your worldline, and another vertical red line representing the worldline of the far end of the platform, 50 meters to your right.  The purple lines represent the worldlines of the front and back ends of the train. From the graph, what is the length of the train in your reference frame?
 \answerspace{0.7in}
 
-\item From the graph, what is the proper length of the train?
+\item From the graph, what is the \textit{proper length} of the train?
 \answerspace{0.7in}
 
-Return to the platform frame.  Just as the train passes, you see a terrorist next to you toss a bomb into the open window of the last train car. It explodes instantly at coordinates $x = 0$, $ct = 0$.
+Return to the platform frame.  Just as the train passes, you see a bad person next to you toss a small bomb into the open window of the last train car. It explodes instantly at coordinates $x = 0$, $ct = 0$.
 
-\item Fortunately, you have recently invented a faster-than-light transmitter that sends messages at five times the speed of light. You immediately use it to send a message to a policeman, who is standing at the front end of the platform, 50 meters from you. This message is represented by the blue line going faster than light away from the origin.  The message reaches him just as the front of the train passes him. At what coordinates $(x,ct)$ does your message reach him (in the platform frame)?
+\item Fortunately, you have recently invented a faster-than-light transmitter that sends messages at five times the speed of light. You immediately use it to send a message to a security guard, who is standing exactly at the far end of the platform, 50 meters from you.  The message reaches the security guard just as the front of the train passes that end of the platform. At what coordinates $(x,ct)$ does your message reach the security guard (in the platform frame)?
 \answerspace{0.7in}
-\index{why are we not editing the mathematica file here? Also, is there a new file?}
 
-The policeman immediately passes the message through another open window to the engineer riding in the front of the train. (The policeman is fast, so this takes him effectively zero time.)
+\item Edit the Mathematica file to show the worldline of the faster-than-light message you send to the security guard.  To do this, start by noticing that there are two small, blue lines randomly placed in the second quadrant of the graph.  For one of the lines, edit its coordinates so that it starts at your position ($x=0$, $ct=0$) and ends at the coordinates you wrote above.  Hit \button{Shift-Enter} to make your changes appear in the graph.
+
+The security guard immediately passes the message through another open window to the engineer riding in the front of the train. (The guard is very fast, so this takes effectively zero time.)
 
 \item Now use the slider to translate the events into the reference frame of the train. At approximately what coordinates 
 $(x', ct')$ in that frame does the engineer receive the message?
 \answerspace{0.7in}
 
-\item To get an exact answer for the previous question, you can enter \verb!lorentz[50,10,0.8]!
-into Mathematica after the graph, then \button{Shift-Enter} to evaluate.  This evaluates a Lorentz transformation on $x=50$ and $ct=10$ with $u=0.8c$.  What are the exact coordinates?
+\item To get an exact answer for the previous question, you can enter calculate the Lorentz transformation by hand, or you can enter the command \verb!lorentz[50,10,0.8]!
+into Mathematica after the graph, hitting \button{Shift-Enter} afterwards to evaluate it.  (This calculates a Lorentz transformation on $x=50$ and $ct=10$ with $v=0.8c$.)  What are the exact coordinates?
 \answerspace{0.7in}
 
-\item The engineer relays the message at speed $5c$ to the brakeman in the last car of the train, using another one of your special transmitters. This is represented by another blue line going faster than light back from the engineer.  In the reference frame of the train, how long does it take the message to reach the brakeman?
+\item The engineer relays the message at speed $5c$ to the conductor in the last car of the train, using another one of your special transmitters. In the reference frame of the train, how long would it take the message to reach the conductor?
 \answerspace{0.7in}
 
-\item At what coordinates $(x', ct')$ does the brakeman receive the message?
+\item At what coordinates $(x', ct')$ in the train reference frame does the conductor receive the message?
 \answerspace{0.7in}
 
-Alerted to the danger, the brakeman closes the window. With the train window closed, the bomb cannot be tossed inside the train, and bounces harmlessly off the window. 
+\item At what coordinates $(x, ct)$ in the platform reference frame does the conductor receive the message?  (\textit{Hint: you will need to perform a reverse Lorentz transformation on the $(x', ct')$ coordinates.  That is the same as a forward Lorentz transformation, but with a velocity of $v=-0.8c$ instead of $v=+0.8c$.})
+\answerspace{0.7in}
+
+\item Edit the Mathematica file to show the worldline of the message from the engineer to the conductor.  In the platform reference frame, that message starts at ($x=50$~m, $ct=10$~m) and ends at the coordinates you wrote above. 
+
+\medskip
+
+Alerted to the danger, the conductor closes the window. With the train window closed, the bomb cannot be tossed inside the train, and bounces harmlessly off the window. 
 \bigskip
 
-\textit{If you flip back to the platform frame, you will see that in this frame the engineer's message to the brakeman has traveled backwards in time.  (It went slightly forward in time in one frame but backward in time in another.)  By sending a message faster than the speed of light, the platform observer has actually changed his own past, thus re-writing his present.  If faster-than-light travel were possible, one could use it to rewrite history, violating causality.  This is one reason why faster-than-light travel has to be impossible.}
-
-\index{Faster than light summary now rewritten.  Check it with Jack.}
+\textit{If you flip back to the platform frame, you will see that in your reference frame the engineer's message to the conductor has traveled backwards in time.  (It went slightly forward in time in one frame but backward in time in another.)  By sending a message faster than the speed of light, you as the platform observer would have actually changed your own past, thus re-writing your present.  If faster-than-light travel were possible, one could use it to rewrite history, violating causality.  This is one reason why faster-than-light travel has to be impossible.}
 
 \end{enumerate}
