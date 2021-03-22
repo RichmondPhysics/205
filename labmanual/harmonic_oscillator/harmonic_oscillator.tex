@@ -14,9 +14,24 @@ So far, all of the potential functions we've studied have been kind of boxy-look
 
 \item Suppose that a particle is being held in place on a spring with some spring constant $\kappa$  (not to be confused with Boltzmann's constant $k$), such that the equilibrium position of the particle is $x=0$.  Sketch graphs below of $F(x)$ and $U(x)$ for the particle, and write equations for them, too.
 \begin{center}
-\includegraphics{harmonic_oscillator/F_axes.eps}
-\includegraphics{harmonic_oscillator/U_axes.eps}
+%\vspace{-0.1in}
+%\includegraphics{potential_intro/activity_1_figs/F_axes.eps}
+\begin{lab_axis}[lab_noticks_4quads,
+	width={2.5in}, height={1.5in},
+	xlabel={$x$},
+	ylabel={$F$},
+	]
+\end{lab_axis}
+\hspace{0.2in}
+\begin{lab_axis}[lab_noticks_4quads,
+	width={2.5in}, height={1.5in},
+	xlabel={$x$},
+	ylabel={$U$},
+	ymin=-0.3,
+	]
+\end{lab_axis}
 \end{center}
+
 \bigskip
 
 \item Think of a real world example when a small particle (say, an atom) is subject to the potential function that can be approximated by the $U(x)$ described above.  (Hint: particles on springs vibrate.  When would an atom basically be held in place, but be free to vibrate back and forth a bit?)
