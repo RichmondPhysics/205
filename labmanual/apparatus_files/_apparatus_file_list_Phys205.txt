@@ -1,3 +1,17 @@
-test1.txt
-test2.txt
-..\..\..\131\StudentGuideModule1\to_do_list.txt
+# This file includes a list of all "apparatus files" (mathematica, capstone, etc.)
+# Used for labs in Physics 205.
+# Default directory is here, in apparatus_files,
+# But other directories can be specified relative to this directory.
+# See _readme.txt for details.
+#
+minkowski_events.nb
+..\..\..\131\StudentGuideModule1\pole_and_barn\pole_and_barn.nb
+..\velocity_transformations\velocity_transformations.nb
+..\faster_than_light\faster_than_light.nb
+..\proper_length_distance\proper_length_vs_proper_distance.nb
+..\twin_paradox\twin_paradox.nb
+#
+# DO NOT INCLUDE the files below; they are essentially "answer keys" for the instructor
+#..\..\..\131\StudentGuideModule1\pole_and_barn\pole_and_barn_complete.nb
+#..\faster_than_light\faster_than_light_complete.nb
+
