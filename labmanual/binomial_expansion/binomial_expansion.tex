@@ -1,0 +1,91 @@
+\section{The Binomial Expansion}
+
+\label{binomial_expansion_lab}
+\makelabheader %(Space for student name, etc., defined in master.tex)
+
+\bigskip
+
+\textbf{Introduction}
+
+In this lab, we'll be examining the binomial expansion, which says that
+\begin{equation}
+(1+x)^\alpha=1+\alpha x+\frac{\alpha(\alpha-1)}{2!} x^2+\frac{\alpha(\alpha-1)(\alpha-2)}{3!} x^3+...
+\end{equation} 
+Moreover, when $x$ is very small ($x \ll 1$),  keeping only the first couple of terms ends up being a very good approximation:
+\begin{equation}
+(1+x)^\alpha \approx 1+\alpha x .
+\end{equation}
+
+\medskip
+\textbf{Activity}
+
+Open the Excel file \filename{binomial\_expansion.xlsx}.  For this worksheet, you should only have to enter numbers into the two yellow boxes.
+
+\begin{enumerate}[wide, nosep]
+\item Using the Excel spreadsheet, what is the exact value of $(1+0.01)^3$?  (That is what is the value of $(1+x)^\alpha$ when $x=0.01$ and $\alpha=3$?)
+\answerspace{0.4in}
+
+\item What is the approximate value of $(1+0.01)^3$ using only...
+
+\medskip
+\hspace{0.5in}...the zeroeth order term?
+
+\medskip
+\hspace{0.5in}...the zeroeth and first order terms?
+
+\medskip
+\hspace{0.5in}...the zeroeth, first, and second order terms?
+
+\medskip
+\item Suppose you decide to keep only terms up to first order, that is, $(1+x)^\alpha \approx 1+\alpha x$.  Does this approximation get better for smaller values of $x$ or for larger values of $x$?
+\answerspace{0.5in}
+
+
+Now, suppose you want to use the binomial expansion to approximate the Lorentz factor $\gamma$ to first order.  We can rewrite the Lorentz factor as
+\begin{equation}
+\gamma=\frac{1}{\sqrt{1 - {v^2}/{c^2}}} = \left(1 - \frac{v^2}{c^2}\right) ^{-\frac{1}{2}}.
+\label{gamma_as_a_power}
+\end{equation}
+
+\item  If we want to approximate $\gamma$ using $(1+x)^\alpha \approx 1 + \alpha x$, what will we use for $x$, in terms of $v$ and $c$?  (Careful with your signs!)
+\answerspace{0.4in}
+
+...And what will we use for $\alpha$?  (Again, careful with your signs!)
+\answerspace{0.5in}
+
+\pagebreak[3]
+Let's try this with numbers, for an object moving at 5\% of the speed of light, $v=0.05c$. 
+
+\medskip
+\item First, calculate the value of the Lorentz factor $\gamma$ exactly, using a calculator like you normally would.
+\answerspace{0.5in}
+
+\item Now estimate the value of $\gamma$ using the binomial expansion to approximate the Lorentz factor $\gamma$ for the object above to first order, using either your calculator or the Excel spreadsheet.  Also write down what numbers you are using for $x$ and $\alpha$. 
+\label{part_approx_for_gamma}
+\answerspace{0.7in}
+
+\item Is the first order binomial expansion a reasonable approximation for an object moving at $v=0.05c$?  If the object moved slower, would the approximation become better or worse?
+\answerspace{0.5in}
+
+\item In Part \ref{part_approx_for_gamma} you used the first-order approximation $\gamma \approx 1 + \dfrac{1}{2}\dfrac{v^2}{c^2}$. What is the first-order approximation for $1 / \gamma$? (\textit{Hint: rewrite $1 / \gamma$ as something raised to a power, as in Equation (\ref{gamma_as_a_power}), but this time raise it to the $+\frac{1}{2}$ power instead of the $-\frac{1}{2}$ power.})
+\label{part_approx_for_one_over_gamma}
+\answerspace{0.5in}
+
+Now let's do a calculation where you really \textit{need} to use the binomial expansion, because a regular calculator might not have enough digits to do it exactly.  
+\item (a) Suppose you travel in your car on a highway at 70 mph, which is roughly 30~m/s.  What is the value of ${v^2}/{c^2}$ for your car?  
+\answerspace{0.5in}
+
+(b) If your car is normally 4.5~meters long, by how much does it shrink due to length contraction at 70~mph?  (\textit{Hint: perhaps your expression from Part \ref{part_approx_for_one_over_gamma} could be handy here?)}
+\answerspace{0.5in}
+
+(c) How many digits would you need on your calculator to calculate $\gamma$ exactly for your car? 
+\answerspace{0.5in}
+
+\item A garden snail has a proper length of 3~cm and a speed of about 1~cm/s.  By how much does this speeding snail shrink due to length contraction?
+\answerspace{0.5in}
+
+\vspace{\fill}
+\hspace{\fill} \textit{Answer: $\sim 1.6 \times 10^{-23}$~meters\footnote{Also expressible as ``16~\textit{yoctometers},'' though you would be forgiven for not having known that.}} 
+\bigskip
+
+\end{enumerate}
