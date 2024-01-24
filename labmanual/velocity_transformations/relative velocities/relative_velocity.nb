@@ -1,0 +1,203 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6408,        193]
+NotebookOptionsPosition[      5696,        172]
+NotebookOutlinePosition[      6106,        188]
+CellTagsIndexPosition[      6063,        185]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CheckboxBar", "[", 
+   RowBox[{
+    RowBox[{"Dynamic", "[", 
+     RowBox[{"x", ",", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"x", "=", 
+         RowBox[{"Reverse", "[", 
+          RowBox[{"Take", "[", 
+           RowBox[{
+            RowBox[{"Reverse", "[", "#", "]"}], ",", 
+            RowBox[{"UpTo", "[", "2", "]"}]}], "]"}], "]"}]}], ")"}], "&"}]}],
+      "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.9132242132429094`*^9, 3.913224216403406*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"af20ce23-3e91-4a7a-89fa-b262ab1df745"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   RowBox[{GridBox[{
+      {
+       CheckboxBox[Dynamic[
+         MemberQ[$CellContext`x, 1], (($CellContext`x = Reverse[
+           Take[
+            Reverse[#], 
+            UpTo[2]]])& )[
+          
+          BoxForm`TogglerBarFunction[$CellContext`x, 1, 
+           False], $CellContext`x]& ],
+        DefaultBaseStyle->"CheckboxBar"], 
+       StyleBox["1", "CheckboxBarLabel",
+        StripOnInput->False]}
+     },
+     AutoDelete->False,
+     BaselinePosition->{1, 2},
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.21]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}], "  ", GridBox[{
+      {
+       CheckboxBox[Dynamic[
+         MemberQ[$CellContext`x, 2], (($CellContext`x = Reverse[
+           Take[
+            Reverse[#], 
+            UpTo[2]]])& )[
+          
+          BoxForm`TogglerBarFunction[$CellContext`x, 2, 
+           False], $CellContext`x]& ],
+        DefaultBaseStyle->"CheckboxBar"], 
+       StyleBox["2", "CheckboxBarLabel",
+        StripOnInput->False]}
+     },
+     AutoDelete->False,
+     BaselinePosition->{1, 2},
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.21]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}], "  ", GridBox[{
+      {
+       CheckboxBox[Dynamic[
+         MemberQ[$CellContext`x, 3], (($CellContext`x = Reverse[
+           Take[
+            Reverse[#], 
+            UpTo[2]]])& )[
+          
+          BoxForm`TogglerBarFunction[$CellContext`x, 3, 
+           False], $CellContext`x]& ],
+        DefaultBaseStyle->"CheckboxBar"], 
+       StyleBox["3", "CheckboxBarLabel",
+        StripOnInput->False]}
+     },
+     AutoDelete->False,
+     BaselinePosition->{1, 2},
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.21]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}], "  ", GridBox[{
+      {
+       CheckboxBox[Dynamic[
+         MemberQ[$CellContext`x, 4], (($CellContext`x = Reverse[
+           Take[
+            Reverse[#], 
+            UpTo[2]]])& )[
+          
+          BoxForm`TogglerBarFunction[$CellContext`x, 4, 
+           False], $CellContext`x]& ],
+        DefaultBaseStyle->"CheckboxBar"], 
+       StyleBox["4", "CheckboxBarLabel",
+        StripOnInput->False]}
+     },
+     AutoDelete->False,
+     BaselinePosition->{1, 2},
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.21]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}]}], "Deploy"],
+  CheckboxBar[
+   Dynamic[$CellContext`x, ($CellContext`x = Reverse[
+      Take[
+       Reverse[#], 
+       UpTo[2]]])& ], {1, 2, 3, 4}]]], "Output",
+ CellChangeTimes->{{3.9132242178176565`*^9, 3.9132242537739944`*^9}},
+ CellLabel->"Out[1]=",ExpressionUUID->"286d2a76-0057-45dd-aba1-3d22a5f9b9db"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"Arrow", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.913224509622611*^9, 3.9132246808308897`*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"df29a509-9fb5-44ea-ae17-a0f21a06ce42"],
+
+Cell[BoxData[
+ GraphicsBox[ArrowBox[{{0, 0}, {1, 0}}]]], "Output",
+ CellChangeTimes->{{3.9132245919358153`*^9, 3.9132246818516235`*^9}},
+ CellLabel->"Out[9]=",ExpressionUUID->"56c0f4cf-6409-4c40-ae61-fa633f5e6bb5"]
+}, Open  ]]
+},
+WindowSize->{573.9, 602.1},
+WindowMargins->{{283.5, Automatic}, {Automatic, 30.9}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"7db46d47-8010-4493-92a5-b0a9136d7e22"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 688, 19, 86, "Input",ExpressionUUID->"af20ce23-3e91-4a7a-89fa-b262ab1df745"],
+Cell[1271, 43, 3761, 106, 32, "Output",ExpressionUUID->"286d2a76-0057-45dd-aba1-3d22a5f9b9db"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5069, 154, 394, 10, 28, "Input",ExpressionUUID->"df29a509-9fb5-44ea-ae17-a0f21a06ce42"],
+Cell[5466, 166, 214, 3, 474, "Output",ExpressionUUID->"56c0f4cf-6409-4c40-ae61-fa633f5e6bb5"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
