@@ -1,0 +1,14 @@
+
+\newcommand{\includeMprobs}[2]{%
+\includepdf[pages=1,pagecommand={#1}, offset=0.125in 0]{#2}
+\includepdf[pages=2-,pagecommand={}, offset=0.125in 0]{#2}
+}
+
+\includeMprobs{\section{The ``M'' Problems}
+\subsection{Waves and Velocity} 
+}{M_problems/MA_problems.pdf}
+\includeMprobs{\subsection{Galilean Relativity}}{M_problems/MB_problems.pdf}
+\includeMprobs{\subsection{Time, Length, and the Lorentz Transformations}}{M_problems/MC_problems.pdf}
+\includeMprobs{\subsection{Velocity Transformations and Examples}}{M_problems/MD_problems.pdf}
+\includeMprobs{\subsection{Gravity}}{M_problems/ME_problems.pdf}
+\includeMprobs{\subsection{Energy and Mass}}{M_problems/MF_problems.pdf}
