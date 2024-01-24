@@ -1,0 +1,20 @@
+Finish radioactivity lab
+(note: include that we're measuring decays, not actual atoms.)
+
+Fix Parts, Labs, right and left markers, etc.
+
+Add section to gravity time dilation lab to make it clear that there's real time dilation?  Maybe a comic strip?
+
+Maybe a new short lab about wristwatch time?
+	Anna on Earth, Carl away, who measures shortest time?
+	Who measures shortest time between events?
+	Bob also leaves, then returns.
+	
+Lecture on gravitational time dilation
+Lecture on eclipse
+color href link correctly
+
+Write mathematica applet (and possibly lab) for velocity transformations
+
+
+
